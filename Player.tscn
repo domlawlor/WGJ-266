@@ -1,0 +1,254 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://Assets/Art/Player/GraveRobber_jump_attack.png" type="Texture" id=1]
+[ext_resource path="res://Player.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Art/Player/GraveRobber_run2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Art/Player/GraveRobber.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Art/Player/GraveRobber_shield.png" type="Texture" id=5]
+[ext_resource path="res://PlayerShader.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Art/Player/GraveRobber_dead.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Art/Player/fire2.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Art/Player/fire1.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Art/Player/fire3.png" type="Texture" id=10]
+[ext_resource path="res://Assets/Audio/death1.mp3" type="AudioStream" id=11]
+[ext_resource path="res://Assets/Audio/death2.mp3" type="AudioStream" id=12]
+[ext_resource path="res://Assets/Audio/hitDeath2.mp3" type="AudioStream" id=13]
+[ext_resource path="res://Assets/Audio/jump2.mp3" type="AudioStream" id=14]
+[ext_resource path="res://Assets/Audio/jump3.mp3" type="AudioStream" id=15]
+[ext_resource path="res://Assets/Audio/jump1.mp3" type="AudioStream" id=16]
+[ext_resource path="res://Assets/Audio/hitDeath1.mp3" type="AudioStream" id=17]
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 7, 15 )
+
+[sub_resource type="Shader" id=22]
+code = "shader_type canvas_item;
+
+uniform float burn = 1.0;
+
+void fragment()
+{
+	COLOR = texture( TEXTURE, UV );
+	COLOR.r *= burn;
+	COLOR.g *= burn;
+	COLOR.b *= burn;
+}"
+
+[sub_resource type="ShaderMaterial" id=23]
+shader = SubResource( 22 )
+shader_param/burn = 1.0
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 1 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 1 )
+region = Rect2( 192, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 3 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 3 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 3 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 192, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 3 )
+region = Rect2( 240, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 5 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 5 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 5 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ SubResource( 25 ) ],
+"loop": false,
+"name": "dead",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 5 ) ],
+"loop": false,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": false,
+"name": "jump",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "run",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 15 ) ],
+"loop": true,
+"name": "shieldIdle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 6 ) ],
+"loop": false,
+"name": "shieldTransition",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 7 ), SubResource( 8 ), SubResource( 8 ) ],
+"loop": true,
+"name": "shieldWalk",
+"speed": 5.0
+} ]
+
+[sub_resource type="Gradient" id=26]
+offsets = PoolRealArray( 0, 0.335196, 0.787709, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1, 0.654902, 0.654902, 0.654902, 1, 0.976471, 0.976471, 0.976471, 0 )
+
+[node name="Player" type="KinematicBody2D" groups=["player"]]
+collision_layer = 3
+script = ExtResource( 2 )
+
+[node name="BurnDeath1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -5.0
+
+[node name="BurnDeath2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+volume_db = -5.0
+
+[node name="HitDeath1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+volume_db = -5.0
+
+[node name="HitDeath2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -5.0
+
+[node name="Jump1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = -5.0
+
+[node name="Jump2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = -5.0
+
+[node name="Jump3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -5.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 9 )
+shape = SubResource( 24 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 23 )
+frames = SubResource( 16 )
+animation = "dead"
+speed_scale = 3.0
+playing = true
+script = ExtResource( 6 )
+
+[node name="DeathTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="JumpBuffer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+
+[node name="FireParticles" type="Node2D" parent="."]
+visible = false
+
+[node name="FireBig" type="CPUParticles2D" parent="FireParticles"]
+position = Vector2( 0, 14 )
+amount = 1
+lifetime = 0.5
+explosiveness = 1.0
+randomness = 0.11
+texture = ExtResource( 10 )
+emission_shape = 2
+emission_rect_extents = Vector2( 5, 2 )
+direction = Vector2( 0, -1 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 6.0
+initial_velocity_random = 0.1
+color_ramp = SubResource( 26 )
+
+[node name="FireSmall1" type="CPUParticles2D" parent="FireParticles"]
+position = Vector2( 1, 8 )
+amount = 2
+lifetime = 0.5
+explosiveness = 1.0
+randomness = 0.19
+texture = ExtResource( 9 )
+emission_shape = 2
+emission_rect_extents = Vector2( 10, 5 )
+direction = Vector2( 0, -1 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 6.0
+initial_velocity_random = 0.1
+color_ramp = SubResource( 26 )
+
+[node name="FireSmall2" type="CPUParticles2D" parent="FireParticles"]
+position = Vector2( 1, 0 )
+amount = 3
+lifetime = 0.5
+explosiveness = 1.0
+randomness = 0.19
+texture = ExtResource( 8 )
+emission_shape = 2
+emission_rect_extents = Vector2( 10, 10 )
+direction = Vector2( 0, -1 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 6.0
+initial_velocity_random = 0.1
+color_ramp = SubResource( 26 )
+
+[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
+[connection signal="timeout" from="DeathTimer" to="." method="_on_DeathTimer_timeout"]

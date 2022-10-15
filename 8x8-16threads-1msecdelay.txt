@@ -1,0 +1,74 @@
+-- simStages starting -- 
+- SimStageNum - 0
+ThreadWorkEnd - threadNum:0, gridPos =(0, 0), totalMS:0.758
+ThreadWorkEnd - threadNum:3, gridPos =(6, 0), totalMS:0.922
+ThreadWorkEnd - threadNum:1, gridPos =(2, 0), totalMS:0.946
+ThreadWorkEnd - threadNum:4, gridPos =(0, 2), totalMS:0.966
+ThreadWorkEnd - threadNum:2, gridPos =(4, 0), totalMS:1.441
+ThreadWorkEnd - threadNum:11, gridPos =(6, 4), totalMS:1.454
+ThreadWorkEnd - threadNum:10, gridPos =(4, 4), totalMS:1.55
+ThreadWorkEnd - threadNum:8, gridPos =(0, 4), totalMS:1.064
+ThreadWorkEnd - threadNum:6, gridPos =(4, 2), totalMS:1.308
+ThreadWorkEnd - threadNum:7, gridPos =(6, 2), totalMS:1.347
+ThreadWorkEnd - threadNum:5, gridPos =(2, 2), totalMS:1.395
+ThreadWorkEnd - threadNum:9, gridPos =(2, 4), totalMS:1.05
+ThreadWorkEnd - threadNum:12, gridPos =(0, 6), totalMS:4.876
+ThreadWorkEnd - threadNum:15, gridPos =(6, 6), totalMS:5.851
+ThreadWorkEnd - threadNum:14, gridPos =(4, 6), totalMS:6.177
+- EndStageNum - 0, timeTaken:7.969
+ThreadWorkEnd - threadNum:13, gridPos =(2, 6), totalMS:6.742
+- SimStageNum - 1
+ThreadWorkEnd - threadNum:0, gridPos =(0, 1), totalMS:1.161
+ThreadWorkEnd - threadNum:5, gridPos =(2, 3), totalMS:1.342
+ThreadWorkEnd - threadNum:3, gridPos =(6, 1), totalMS:1.408
+ThreadWorkEnd - threadNum:1, gridPos =(2, 1), totalMS:1.441
+ThreadWorkEnd - threadNum:7, gridPos =(6, 3), totalMS:1.495
+ThreadWorkEnd - threadNum:6, gridPos =(4, 3), totalMS:1.609
+ThreadWorkEnd - threadNum:4, gridPos =(0, 3), totalMS:0.984
+ThreadWorkEnd - threadNum:8, gridPos =(0, 5), totalMS:2.7
+ThreadWorkEnd - threadNum:2, gridPos =(4, 1), totalMS:1.095
+ThreadWorkEnd - threadNum:11, gridPos =(6, 5), totalMS:2.182
+ThreadWorkEnd - threadNum:10, gridPos =(4, 5), totalMS:1.93
+ThreadWorkEnd - threadNum:9, gridPos =(2, 5), totalMS:3.499
+ThreadWorkEnd - threadNum:12, gridPos =(0, 7), totalMS:5.38
+ThreadWorkEnd - threadNum:15, gridPos =(6, 7), totalMS:6.456
+ThreadWorkEnd - threadNum:13, gridPos =(2, 7), totalMS:7.422
+- EndStageNum - 1, timeTaken:8.877
+ThreadWorkEnd - threadNum:14, gridPos =(4, 7), totalMS:7.191
+- SimStageNum - 2
+ThreadWorkEnd - threadNum:3, gridPos =(7, 0), totalMS:1.332
+ThreadWorkEnd - threadNum:6, gridPos =(5, 2), totalMS:1.51
+ThreadWorkEnd - threadNum:7, gridPos =(7, 2), totalMS:1.615
+ThreadWorkEnd - threadNum:1, gridPos =(3, 0), totalMS:1.649
+ThreadWorkEnd - threadNum:0, gridPos =(1, 0), totalMS:1.662
+ThreadWorkEnd - threadNum:11, gridPos =(7, 4), totalMS:1.705
+ThreadWorkEnd - threadNum:9, gridPos =(3, 4), totalMS:2.041
+ThreadWorkEnd - threadNum:10, gridPos =(5, 4), totalMS:2.049
+ThreadWorkEnd - threadNum:5, gridPos =(3, 2), totalMS:2.052
+ThreadWorkEnd - threadNum:4, gridPos =(1, 2), totalMS:1.509
+ThreadWorkEnd - threadNum:2, gridPos =(5, 0), totalMS:0.812
+ThreadWorkEnd - threadNum:8, gridPos =(1, 4), totalMS:1.149
+ThreadWorkEnd - threadNum:15, gridPos =(7, 6), totalMS:2.989
+ThreadWorkEnd - threadNum:13, gridPos =(3, 6), totalMS:5.259
+ThreadWorkEnd - threadNum:14, gridPos =(5, 6), totalMS:5.555
+- EndStageNum - 2, timeTaken:8.882
+ThreadWorkEnd - threadNum:12, gridPos =(1, 6), totalMS:7.071
+- SimStageNum - 3
+ThreadWorkEnd - threadNum:7, gridPos =(7, 3), totalMS:0.861
+ThreadWorkEnd - threadNum:3, gridPos =(7, 1), totalMS:0.865
+ThreadWorkEnd - threadNum:11, gridPos =(7, 5), totalMS:1.136
+ThreadWorkEnd - threadNum:0, gridPos =(1, 1), totalMS:1.216
+ThreadWorkEnd - threadNum:6, gridPos =(5, 3), totalMS:1.219
+ThreadWorkEnd - threadNum:1, gridPos =(3, 1), totalMS:1.353
+ThreadWorkEnd - threadNum:4, gridPos =(1, 3), totalMS:1.085
+ThreadWorkEnd - threadNum:5, gridPos =(3, 3), totalMS:1.139
+ThreadWorkEnd - threadNum:2, gridPos =(5, 1), totalMS:1.11
+ThreadWorkEnd - threadNum:10, gridPos =(5, 5), totalMS:2.313
+ThreadWorkEnd - threadNum:9, gridPos =(3, 5), totalMS:2.763
+ThreadWorkEnd - threadNum:8, gridPos =(1, 5), totalMS:4.113
+ThreadWorkEnd - threadNum:15, gridPos =(7, 7), totalMS:5.026
+ThreadWorkEnd - threadNum:12, gridPos =(1, 7), totalMS:6.067
+ThreadWorkEnd - threadNum:14, gridPos =(5, 7), totalMS:7.109
+ThreadWorkEnd - threadNum:13, gridPos =(3, 7), totalMS:7.217
+- EndStageNum - 3, timeTaken:8.552
+-- simStages finished -- timeTaken: 34.412

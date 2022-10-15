@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/diamond.mp3-9162d99f6acc3aca8a80268ef63488d0.mp3str"
+
+[deps]
+
+source_file="res://Assets/Audio/diamond.mp3"
+dest_files=[ "res://.import/diamond.mp3-9162d99f6acc3aca8a80268ef63488d0.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
