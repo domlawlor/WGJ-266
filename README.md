@@ -1,5 +1,8 @@
-Rays of Giza - game made for Weekly Game Jam 266
+## Rays of Giza 
 
+![GameTitleScreenImage](title.png)
+
+A game made for Weekly Game Jam 266
 Check it out at https://bronxtaco.itch.io/rays-of-giza
 
 Made by myself and Tim 'BronxTaco' Day. Its a simple one level platformer we pulled together in a few days.
